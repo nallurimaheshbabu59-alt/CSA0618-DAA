@@ -1,0 +1,23 @@
+def linear_search(arr, key):
+    """
+    Performs a linear search to find the key in the array.
+    Returns the index if found, otherwise returns -1.
+    """
+    for index in range(len(arr)):
+        # Sequential scanning: checking each element one by one
+        if arr[index] == key:
+            return index  # Key found
+    return -1  # Key not found
+
+# Sample Input
+elements = [10, 25, 30, 45, 50]
+search_key = 30
+
+# Execution
+result = linear_search(elements, search_key)
+
+# Sample Output
+if result != -1:
+    print(f"Key found at index {result}")
+else:
+    print("Key not found in the array")
