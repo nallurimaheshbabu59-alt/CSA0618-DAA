@@ -1,0 +1,26 @@
+def binary_search(arr, key, low, high):
+    if low > high:
+        return -1
+
+    mid = (low + high) // 2
+
+    if arr[mid] == key:
+        return mid
+    elif key < arr[mid]:
+        return binary_search(arr, key, low, mid - 1)
+    else:
+        return binary_search(arr, key, mid + 1, high)
+
+
+# Sample Input
+arr = [5, 10, 15, 20, 25]
+key = 20
+
+# Perform recursive binary search
+index = binary_search(arr, key, 0, len(arr) - 1)
+
+# Sample Output
+if index != -1:
+    print("Key found at index", index)
+else:
+    print("Key not found")
